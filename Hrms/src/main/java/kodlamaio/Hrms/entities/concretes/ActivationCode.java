@@ -7,8 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import kodlamaio.Hrms.entities.abstracts.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,12 +28,16 @@ public class ActivationCode {
 	@Column(name = "id")
 	private int id;
 	
+	@ManyToOne()
+	@JoinColumn(name = "user_id")
+	private User user;
+	
 	@Column(name = "activation_code")
 	private String activationCode;
 	
 	@Column(name = "is_confirmed")
 	private boolean isCpnfirmed;
 	
-	@Column(name = "confirmedDate", columnDefinition = "Date default CURRENT_DATE")
+	@Column(name = "confirmed_date", columnDefinition = "Date default CURRENT_DATE")
 	private LocalDate confirmedDate = LocalDate.now();
 }
