@@ -18,6 +18,5 @@ public interface JobAdvertisementService {
 	
 	Result add(JobAdvertisement jobAdvertisement);
 		
-////	Result update(int jobAdvertisemenId,JobAdvertisement jobAdvertisement);
 
 }

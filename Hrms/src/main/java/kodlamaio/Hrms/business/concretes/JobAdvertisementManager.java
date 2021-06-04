@@ -10,25 +10,20 @@ import kodlamaio.Hrms.core.utilities.results.DataResult;
 import kodlamaio.Hrms.core.utilities.results.Result;
 import kodlamaio.Hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.Hrms.core.utilities.results.SuccessResult;
-import kodlamaio.Hrms.dataAccess.abstracts.CityDao;
-import kodlamaio.Hrms.dataAccess.abstracts.EmployerDao;
 import kodlamaio.Hrms.dataAccess.abstracts.JobAdvertisementDao;
 import kodlamaio.Hrms.entities.concretes.JobAdvertisement;
-import kodlamaio.Hrms.entities.dtos.JobAdvertisementDto;
 
 @Service
 public class JobAdvertisementManager implements JobAdvertisementService{
 	
 	private JobAdvertisementDao jobAdvertisementDao;
-	private EmployerDao employerDao;
-	private CityDao cityDao;
+
 	
 	@Autowired
-	public JobAdvertisementManager(JobAdvertisementDao jobAdvertisementDao, EmployerDao employerDao, CityDao cityDao) {
+	public JobAdvertisementManager(JobAdvertisementDao jobAdvertisementDao) {
 		super();
 		this.jobAdvertisementDao = jobAdvertisementDao;
-		this.employerDao = employerDao;
-		this.cityDao = cityDao;
+
 	}
 
 	@Override
@@ -60,17 +55,6 @@ public class JobAdvertisementManager implements JobAdvertisementService{
 	
 
 
-//	@Override
-//	public Result update(int jobAdvertisementId, JobAdvertisement jobAdvertisement) {
-//		JobAdvertisement resultAdvertisement = jobAdvertisementDao.findById(jobAdvertisementId).get();
-//		resultAdvertisement.setActive(jobAdvertisement.isActive());
-//		
-//		if (jobAdvertisement.getApplicationDeadLine().isBefore(LocalDate.now())) {
-//			return new ErrorResult("İlan tarihi geçmiş!");
-//		}	
-//		
-//		return new SuccessResult();
-//	}
 
 	
 }

@@ -54,10 +54,4 @@ public class JobAdvertisementController {
 	}
 	
 	
-	
-//	@PostMapping("/updatejobAdvertisementDate")
-//	public Result update(@RequestBody int jobAdvertisementId,@RequestBody JobAdvertisement jobAdvertisement) {
-//		return this.jobAdvertisementService.update(jobAdvertisementId, jobAdvertisement);
-//		
-//	}
 }

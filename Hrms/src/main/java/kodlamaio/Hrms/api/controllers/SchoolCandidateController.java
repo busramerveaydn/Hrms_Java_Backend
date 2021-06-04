@@ -35,4 +35,9 @@ public class SchoolCandidateController {
 	public Result add(@RequestBody SchoolCandidate schoolCandidate) {
 		return this.schoolCandidateService.add(schoolCandidate);
 	}
+	
+	@GetMapping("/getByCandidateId")
+	public DataResult<List<SchoolCandidate>> getByCandidateId(int candidateId){
+		return this.schoolCandidateService.getByCandidateId(candidateId);
+	}
 }

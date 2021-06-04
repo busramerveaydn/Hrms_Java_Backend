@@ -34,4 +34,9 @@ public class LanguageCandidateController {
 	public Result add(@RequestBody LanguageCandidate languageCandidate) {
 		return this.languageCandidateService.add(languageCandidate);
 	}
+	
+	@GetMapping("getByCandidateId")
+	public DataResult<List<LanguageCandidate>> getByCandidateId(int candidateId){
+		return this.languageCandidateService.getByCandidateId(candidateId);
+	}
 }
