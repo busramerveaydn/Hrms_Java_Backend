@@ -1,6 +1,6 @@
 package kodlamaio.Hrms.entities.concretes;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,8 +41,8 @@ public class SchoolCandidate {
 	private Candidate candidate;
 	
 	@Column(name = "date_of_entry")
-	private LocalDate dateOfEntry;
+	private Date dateOfEntry;
 	
 	@Column(name = "date_of_graduation")
-	private LocalDate dateOfGraduation;
+	private Date dateOfGraduation;
 }

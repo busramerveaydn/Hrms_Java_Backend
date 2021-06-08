@@ -36,7 +36,7 @@ public class Department {
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "depatment_name")
+	@Column(name = "department_name")
 	private String depatmentName;
 	
 	@JsonIgnore

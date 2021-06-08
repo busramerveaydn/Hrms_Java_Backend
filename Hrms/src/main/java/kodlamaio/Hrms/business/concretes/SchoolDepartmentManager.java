@@ -31,6 +31,7 @@ public class SchoolDepartmentManager implements SchoolDepartmentService{
 
 	@Override
 	public Result add(SchoolDepartment schoolDepartment) {
+		this.schoolDepartmentDao.save(schoolDepartment);
 		return new SuccessResult("Başarıyla eklendi.");
 	}
 

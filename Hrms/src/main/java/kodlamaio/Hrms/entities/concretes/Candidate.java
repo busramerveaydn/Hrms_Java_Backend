@@ -1,5 +1,6 @@
 package kodlamaio.Hrms.entities.concretes;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -48,7 +49,7 @@ public class Candidate extends User{
 	private String identityNumber;
 	
 	@Column(name = "birth_date")
-	private LocalDate birthDate;
+	private Date birthDate;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "candidate")
